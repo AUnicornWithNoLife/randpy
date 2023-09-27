@@ -11,7 +11,7 @@ while True:
     d = os.listdir(dest)
 
     if len(o <= 0):
-        pass
+        continue
 
     for ide in d:
         os.remove(dest + d)
