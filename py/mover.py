@@ -2,7 +2,11 @@ import os, time, shutil
 
 org, dest = "C:/Users/Vistor/Downloads", "D:/"
 
+off = .5
+
 while True:
+    time.sleep(off)
+
     o = os.listdir(org)
     d = os.listdir(dest)
 
