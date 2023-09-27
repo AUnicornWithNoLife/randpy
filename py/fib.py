@@ -1,9 +1,9 @@
 import os, time
 
-mX = os.get_terminal_size().columns 
 s = 1
 
 while True:
+    mX = os.get_terminal_size().columns 
     x, pX = 1, 0
     sX = ''
 
