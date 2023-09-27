@@ -1,6 +1,6 @@
 import os, time, shutil
 
-org, dest = "C:/Users/Vistor/Downloads", "D:/"
+org, dest = "C:/Users/Visitor/Downloads/", "D:/"
 
 off = .5
 
@@ -10,12 +10,17 @@ while True:
     o = os.listdir(org)
     d = os.listdir(dest)
 
-    if len(o <= 0):
+    if len(o) <= 0:
         continue
 
     for ide in d:
-        os.remove(dest + d)
+        try:
+            os.remove(dest + ide)
+        except e:
+            print(e)
 
     for io in o:
-        shutil.move(org + io, dest + io)
-        os.remove(org + io)
+        try:
+            shutil.move(org + io, dest + io)
+        except e:
+            print(e)
